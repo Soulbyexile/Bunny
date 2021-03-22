@@ -1,0 +1,177 @@
+--ESP
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local ItemESP = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.Position = UDim2.new(0.135440186, 0, 0.127090305, 0)
+MainFrame.Size = UDim2.new(0, 223, 0, 100)
+MainFrame.Visible = false
+MainFrame.Draggable = true
+
+TextLabel.Parent = MainFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Size = UDim2.new(0, 222, 0, 20)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = " Ebal Danko(Danko is a nigger)"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 22.000
+
+ItemESP.Name = "Item ESP"
+ItemESP.Parent = MainFrame
+ItemESP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ItemESP.Position = UDim2.new(0.0493273549, 0, 0.360000014, 0)
+ItemESP.Size = UDim2.new(0, 200, 0, 48)
+ItemESP.Font = Enum.Font.SourceSans
+ItemESP.Text = "ESP"
+ItemESP.TextColor3 = Color3.fromRGB(0, 0, 0)
+ItemESP.TextSize = 30.000
+ItemESP.MouseButton1Down:connect(function()
+	local Settings = {
+		ItemData = {
+			[4496695972] = { ItemName = "Arrow", Color = Color3.fromRGB(255, 120, 0) },
+			[511706016] =  { ItemName = "Diamond", Color = Color3.fromRGB(81, 117, 255) },
+			[3497428510] = { ItemName = "Rokakaka", Color = Color3.fromRGB(220, 50, 50) },
+			[3583727108] = { ItemName = "Gold Coin", Color = Color3.fromRGB(255, 240, 0) },
+			[4551120971] = { ItemName = "Stone Mask", Color = Color3.fromRGB(98, 37, 209) },
+			[5249254947] = { ItemName = "Rib Cage of The Saint's Corpse", Color = Color3.fromRGB(50, 220, 50) },
+			[5291254518] = { ItemName = "Steel Ball", Color = Color3.fromRGB(34, 139, 34) },
+			[5675321032] = { ItemName = "DIO's Diary", Color = Color3.fromRGB(139, 69, 19) },
+			[60791940] = { ItemName = "Ancient Scroll", Color = Color3.fromRGB(165, 42, 42) },
+			[180620778] = { ItemName = "Quinton's Glove", Color = Color3.fromRGB(139, 0, 0) },
+			[11124978] = { ItemName = "Zepellin's Headband", Color = Color3.fromRGB(250, 128, 114) }
+
+		},
+		Tracers = false,
+		Circles = true,
+		Distance = true,
+		Notify = true
+	}
+
+	local function notify(a)
+		local NotificationBindable = Instance.new("BindableFunction")
+		NotificationBindable.OnInvoke = (function(text) end)
+
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Item spawned";
+			Text = a;
+			Duration = "5";
+			Callback = NotificationBindable;
+		})
+	end
+
+	local Wrapper = loadstring(game:HttpGet("https://pastebin.com/raw/9YKGCEmS"))()
+	local Map = workspace.Item_Spawns.Items
+
+	local function GetAsset(Id)
+		if Id:sub(1, 13) == "rbxassetid://" then
+			return tonumber(Id:sub(14, #Id)) -- rbxassetid://0
+		else
+			if Id:sub(1, 32) == "http://www.roblox.com/asset/?id=" then
+				return tonumber(Id:sub(33, #Id))
+			elseif Id:sub(1, 33) == "https://www.roblox.com/asset/?id=" then
+				return tonumber(Id:sub(34, #Id))
+			end
+			return tonumber(Id) -- maybe idk
+		end
+	end
+
+	local function IsItem(Mesh)
+		local AssetId = GetAsset(Mesh.MeshId)
+
+		for id, _ in pairs(Settings.ItemData) do
+			if id == AssetId then
+				return true
+			end
+		end
+
+		return false
+	end
+
+	local function Esp(Item)
+		local itemData = Settings.ItemData[GetAsset(Item.MeshId)] or { ItemName = "Unknown Item [???]", Color = Color3.fromRGB(255, 255, 255) }
+		-- Some items decide to re-use mesh so oof!
+
+		if Item.Material == Enum.Material.ForceField then
+			itemData = { ItemName = "Pure Rokakaka", Color = Color3.fromRGB(233, 233, 233) }
+		end
+
+		if Settings.Notify then
+			notify(itemData.ItemName)
+		end
+
+		Wrapper:AddObject(
+			Item,
+			itemData.ItemName,
+			itemData.Color,
+			Settings.Distance,
+			Settings.Tracers,
+			Settings.Circles
+		)
+	end
+
+	-- Grab items that are currently in the game
+
+	for Index, Object in pairs(Map:GetDescendants()) do
+		if Object:IsA("MeshPart") then
+			if IsItem(Object) then
+				Esp(Object)
+			end
+		end
+	end
+
+	-- Detect New Items
+	Map.DescendantAdded:Connect(function(Descendant)
+		if Descendant:IsA("MeshPart") then
+			if IsItem(Descendant) then
+				Esp(Descendant)
+			end
+		end
+	end)
+end)
+
+Close.Name = "Close"
+Close.Parent = MainFrame
+Close.BackgroundColor3 = Color3.fromRGB(18, 16, 17)
+Close.Position = UDim2.new(0.9147982, 0, 0, 0)
+Close.Size = UDim2.new(0, 18, 0, 20)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 0, 21)
+Close.TextSize = 14.000
+Close.MouseButton1Down:connect(function()
+Open.Visible = true
+MainFrame.Visible = false
+end)
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = ScreenGui
+OpenFrame.Active = true
+OpenFrame.BackgroundColor3 = Color3.fromRGB(85, 255, 0)
+OpenFrame.Position = UDim2.new(0, 0, 0.193979919, 0)
+OpenFrame.Size = UDim2.new(0, 77, 0, 20)
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.fromRGB(18, 16, 17)
+Open.Size = UDim2.new(0, 77, 0, 20)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(43, 255, 0)
+Open.TextSize = 14.000
+Open.MouseButton1Down:connect(function()
+MainFrame.Visible = true
+OpenFrame.Visible = false
+end)
