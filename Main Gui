@@ -1,0 +1,81 @@
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local label = Instance.new("TextLabel")
+local SpeedHack = Instance.new("TextButton")
+local ESPgui = Instance.new("TextButton")
+local Invisiblegui = Instance.new("TextButton")
+local Quest = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+main.Position = UDim2.new(0.00999231357, 0, 0.105341248, 0)
+main.Size = UDim2.new(0, 173, 0, 507)
+main.Active = true
+main.Draggable = true
+
+label.Name = "label"
+label.Parent = ScreenGui
+label.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+label.Position = UDim2.new(0.00999231357, 0, 0.105341248, 0)
+label.Size = UDim2.new(0, 173, 0, 40)
+label.Font = Enum.Font.SciFi
+label.Text = "GG ez cringe kids"
+label.TextColor3 = Color3.fromRGB(51, 239, 17)
+label.TextSize = 20.000
+
+SpeedHack.Name = "SpeedHack"
+SpeedHack.Parent = ScreenGui
+SpeedHack.BackgroundColor3 = Color3.fromRGB(34, 255, 0)
+SpeedHack.Position = UDim2.new(0.0146041512, 0, 0.179525226, 0)
+SpeedHack.Size = UDim2.new(0, 160, 0, 25)
+SpeedHack.Font = Enum.Font.SciFi
+SpeedHack.Text = "SpeedHack"
+SpeedHack.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedHack.TextSize = 20.000
+SpeedHack.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/2"))()
+end)
+
+ESPgui.Name = "ESP gui"
+ESPgui.Parent = ScreenGui
+ESPgui.BackgroundColor3 = Color3.fromRGB(34, 255, 0)
+ESPgui.Position = UDim2.new(0.0146041512, 0, 0.229970336, 0)
+ESPgui.Size = UDim2.new(0, 160, 0, 25)
+ESPgui.Font = Enum.Font.SciFi
+ESPgui.Text = "ESP gui"
+ESPgui.TextColor3 = Color3.fromRGB(0, 0, 0)
+ESPgui.TextSize = 20.000
+ESPgui.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/1"))()
+end)
+
+Invisiblegui.Name = "Invisible gui"
+Invisiblegui.Parent = ScreenGui
+Invisiblegui.BackgroundColor3 = Color3.fromRGB(34, 255, 0)
+Invisiblegui.Position = UDim2.new(0.0146041512, 0, 0.278931767, 0)
+Invisiblegui.Size = UDim2.new(0, 160, 0, 25)
+Invisiblegui.Font = Enum.Font.SciFi
+Invisiblegui.Text = "Invisible gui"
+Invisiblegui.TextColor3 = Color3.fromRGB(0, 0, 0)
+Invisiblegui.TextSize = 20.000
+Invisiblegui.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/3"))()
+end)
+
+Quest.Name = "Quest"
+Quest.Parent = ScreenGui
+Quest.BackgroundColor3 = Color3.fromRGB(34, 255, 0)
+Quest.Position = UDim2.new(0.0146041512, 0, 0.327893198, 0)
+Quest.Size = UDim2.new(0, 160, 0, 25)
+Quest.Font = Enum.Font.SciFi
+Quest.Text = "Quest"
+Quest.TextColor3 = Color3.fromRGB(0, 0, 0)
+Quest.TextSize = 20.000
+Quest.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/4"))()
+end)
