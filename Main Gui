@@ -30,6 +30,7 @@ Main.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.0663673356, 0, 0.0778126791, 0)
 Main.Size = UDim2.new(0, 111, 0, 535)
+Main.Active = true
 Main.Draggable = true
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(55, 206, 223)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(91, 136, 229))}
@@ -37,7 +38,6 @@ UIGradient.Parent = Main
 
 UICorner.CornerRadius = UDim.new(0, 4)
 UICorner.Parent = Main
-Main.Active = true
 
 SpeedHack.Name = "SpeedHack"
 SpeedHack.Parent = Main
