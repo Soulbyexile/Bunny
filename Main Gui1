@@ -2,10 +2,9 @@ local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local UIGradient = Instance.new("UIGradient")
 local UICorner = Instance.new("UICorner")
-local SpeedHack = Instance.new("TextButton")
-local Quest = Instance.new("TextButton")
 local ItemEsp = Instance.new("TextButton")
-local Invisible = Instance.new("TextButton")
+local Quest = Instance.new("TextButton")
+local SpeedHack = Instance.new("TextButton")
 local WIP = Instance.new("TextButton")
 local WIP_2 = Instance.new("TextButton")
 local WIP_3 = Instance.new("TextButton")
@@ -18,6 +17,20 @@ local WIP_9 = Instance.new("TextButton")
 local WIP_10 = Instance.new("TextButton")
 local WIP_11 = Instance.new("TextButton")
 local WIP_12 = Instance.new("TextButton")
+local Invisible = Instance.new("TextButton")
+local Login = Instance.new("Frame")
+local UIGradient_2 = Instance.new("UIGradient")
+local UICorner_2 = Instance.new("UICorner")
+local Login_2 = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local Key = Instance.new("TextBox")
+local UICorner_4 = Instance.new("UICorner")
+local LoadingGui = Instance.new("Frame")
+local UIGradient_3 = Instance.new("UIGradient")
+local UICorner_5 = Instance.new("UICorner")
+local Loading = Instance.new("TextBox")
+local UICorner_6 = Instance.new("UICorner")
 
 --Properties:
 
@@ -28,33 +41,34 @@ Main.Parent = ScreenGui
 Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Main.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.0663673356, 0, 0.0778126791, 0)
+Main.Position = UDim2.new(0.0476541407, 0, 0.0600085147, 0)
 Main.Size = UDim2.new(0, 111, 0, 535)
+Main.Active = true
 Main.Draggable = true
+Main.Visible = false
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(55, 206, 223)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(91, 136, 229))}
 UIGradient.Parent = Main
 
 UICorner.CornerRadius = UDim.new(0, 4)
 UICorner.Parent = Main
-Main.Active = true
 
-SpeedHack.Name = "SpeedHack"
-SpeedHack.Parent = Main
-SpeedHack.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-SpeedHack.BorderColor3 = Color3.fromRGB(48, 66, 90)
-SpeedHack.BorderSizePixel = 2
-SpeedHack.Position = UDim2.new(0.0522675514, 0, 0.014872238, 0)
-SpeedHack.Size = UDim2.new(0, 98, 0, 31)
-SpeedHack.ZIndex = 2
-SpeedHack.AutoButtonColor = false
-SpeedHack.Font = Enum.Font.Ubuntu
-SpeedHack.Text = "SpeedHack"
-SpeedHack.TextColor3 = Color3.fromRGB(0, 0, 0)
-SpeedHack.TextSize = 20.000
-SpeedHack.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
-SpeedHack.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/2"))()
+ItemEsp.Name = "Item Esp"
+ItemEsp.Parent = Main
+ItemEsp.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+ItemEsp.BorderColor3 = Color3.fromRGB(48, 66, 90)
+ItemEsp.BorderSizePixel = 2
+ItemEsp.Position = UDim2.new(0.0522675514, 0, 0.0728161633, 0)
+ItemEsp.Size = UDim2.new(0, 98, 0, 31)
+ItemEsp.ZIndex = 2
+ItemEsp.AutoButtonColor = false
+ItemEsp.Font = Enum.Font.Ubuntu
+ItemEsp.Text = "Item Esp"
+ItemEsp.TextColor3 = Color3.fromRGB(0, 0, 0)
+ItemEsp.TextSize = 20.000
+ItemEsp.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+ItemEsp.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/1"))()
 end)
 
 Quest.Name = "Quest"
@@ -75,23 +89,203 @@ Quest.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/4"))()
 end)
 
-ItemEsp.Name = "Item Esp"
-ItemEsp.Parent = Main
-ItemEsp.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-ItemEsp.BorderColor3 = Color3.fromRGB(48, 66, 90)
-ItemEsp.BorderSizePixel = 2
-ItemEsp.Position = UDim2.new(0.0522675514, 0, 0.0728161633, 0)
-ItemEsp.Size = UDim2.new(0, 98, 0, 31)
-ItemEsp.ZIndex = 2
-ItemEsp.AutoButtonColor = false
-ItemEsp.Font = Enum.Font.Ubuntu
-ItemEsp.Text = "Item Esp"
-ItemEsp.TextColor3 = Color3.fromRGB(0, 0, 0)
-ItemEsp.TextSize = 20.000
-ItemEsp.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
-ItemEsp.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/1"))()
+SpeedHack.Name = "SpeedHack"
+SpeedHack.Parent = Main
+SpeedHack.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+SpeedHack.BorderColor3 = Color3.fromRGB(48, 66, 90)
+SpeedHack.BorderSizePixel = 2
+SpeedHack.Position = UDim2.new(0.0522675514, 0, 0.014872238, 0)
+SpeedHack.Size = UDim2.new(0, 98, 0, 31)
+SpeedHack.ZIndex = 2
+SpeedHack.AutoButtonColor = false
+SpeedHack.Font = Enum.Font.Ubuntu
+SpeedHack.Text = "SpeedHack"
+SpeedHack.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedHack.TextSize = 20.000
+SpeedHack.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+SpeedHack.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/2"))()
 end)
+
+WIP.Name = "W.I.P"
+WIP.Parent = Main
+WIP.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP.BorderSizePixel = 2
+WIP.Position = UDim2.new(0.0522675514, 0, 0.710199356, 0)
+WIP.Size = UDim2.new(0, 98, 0, 31)
+WIP.ZIndex = 2
+WIP.AutoButtonColor = false
+WIP.Font = Enum.Font.Ubuntu
+WIP.Text = "W.I.P"
+WIP.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP.TextSize = 20.000
+WIP.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_2.Name = "W.I.P"
+WIP_2.Parent = Main
+WIP_2.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_2.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_2.BorderSizePixel = 2
+WIP_2.Position = UDim2.new(0.0522675514, 0, 0.768143296, 0)
+WIP_2.Size = UDim2.new(0, 98, 0, 31)
+WIP_2.ZIndex = 2
+WIP_2.AutoButtonColor = false
+WIP_2.Font = Enum.Font.Ubuntu
+WIP_2.Text = "W.I.P"
+WIP_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_2.TextSize = 20.000
+WIP_2.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_3.Name = "W.I.P"
+WIP_3.Parent = Main
+WIP_3.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_3.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_3.BorderSizePixel = 2
+WIP_3.Position = UDim2.new(0.0522675514, 0, 0.884031177, 0)
+WIP_3.Size = UDim2.new(0, 98, 0, 31)
+WIP_3.ZIndex = 2
+WIP_3.AutoButtonColor = false
+WIP_3.Font = Enum.Font.Ubuntu
+WIP_3.Text = "W.I.P"
+WIP_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_3.TextSize = 20.000
+WIP_3.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_4.Name = "W.I.P"
+WIP_4.Parent = Main
+WIP_4.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_4.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_4.BorderSizePixel = 2
+WIP_4.Position = UDim2.new(0.0522675514, 0, 0.594311476, 0)
+WIP_4.Size = UDim2.new(0, 98, 0, 31)
+WIP_4.ZIndex = 2
+WIP_4.AutoButtonColor = false
+WIP_4.Font = Enum.Font.Ubuntu
+WIP_4.Text = "W.I.P"
+WIP_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_4.TextSize = 20.000
+WIP_4.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_5.Name = "W.I.P"
+WIP_5.Parent = Main
+WIP_5.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_5.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_5.BorderSizePixel = 2
+WIP_5.Position = UDim2.new(0.0522675514, 0, 0.536367536, 0)
+WIP_5.Size = UDim2.new(0, 98, 0, 31)
+WIP_5.ZIndex = 2
+WIP_5.AutoButtonColor = false
+WIP_5.Font = Enum.Font.Ubuntu
+WIP_5.Text = "W.I.P"
+WIP_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_5.TextSize = 20.000
+WIP_5.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_6.Name = "W.I.P"
+WIP_6.Parent = Main
+WIP_6.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_6.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_6.BorderSizePixel = 2
+WIP_6.Position = UDim2.new(0.0522675514, 0, 0.652255416, 0)
+WIP_6.Size = UDim2.new(0, 98, 0, 31)
+WIP_6.ZIndex = 2
+WIP_6.AutoButtonColor = false
+WIP_6.Font = Enum.Font.Ubuntu
+WIP_6.Text = "W.I.P"
+WIP_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_6.TextSize = 20.000
+WIP_6.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_7.Name = "W.I.P"
+WIP_7.Parent = Main
+WIP_7.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_7.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_7.BorderSizePixel = 2
+WIP_7.Position = UDim2.new(0.0522675514, 0, 0.826087236, 0)
+WIP_7.Size = UDim2.new(0, 98, 0, 31)
+WIP_7.ZIndex = 2
+WIP_7.AutoButtonColor = false
+WIP_7.Font = Enum.Font.Ubuntu
+WIP_7.Text = "W.I.P"
+WIP_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_7.TextSize = 20.000
+WIP_7.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_8.Name = "W.I.P"
+WIP_8.Parent = Main
+WIP_8.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_8.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_8.BorderSizePixel = 2
+WIP_8.Position = UDim2.new(0.0522675514, 0, 0.246647939, 0)
+WIP_8.Size = UDim2.new(0, 98, 0, 31)
+WIP_8.ZIndex = 2
+WIP_8.AutoButtonColor = false
+WIP_8.Font = Enum.Font.Ubuntu
+WIP_8.Text = "W.I.P"
+WIP_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_8.TextSize = 20.000
+WIP_8.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_9.Name = "W.I.P"
+WIP_9.Parent = Main
+WIP_9.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_9.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_9.BorderSizePixel = 2
+WIP_9.Position = UDim2.new(0.0522675514, 0, 0.478423625, 0)
+WIP_9.Size = UDim2.new(0, 98, 0, 31)
+WIP_9.ZIndex = 2
+WIP_9.AutoButtonColor = false
+WIP_9.Font = Enum.Font.Ubuntu
+WIP_9.Text = "W.I.P"
+WIP_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_9.TextSize = 20.000
+WIP_9.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_10.Name = "W.I.P"
+WIP_10.Parent = Main
+WIP_10.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_10.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_10.BorderSizePixel = 2
+WIP_10.Position = UDim2.new(0.0522675514, 0, 0.304591864, 0)
+WIP_10.Size = UDim2.new(0, 98, 0, 31)
+WIP_10.ZIndex = 2
+WIP_10.AutoButtonColor = false
+WIP_10.Font = Enum.Font.Ubuntu
+WIP_10.Text = "W.I.P"
+WIP_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_10.TextSize = 20.000
+WIP_10.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_11.Name = "W.I.P"
+WIP_11.Parent = Main
+WIP_11.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_11.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_11.BorderSizePixel = 2
+WIP_11.Position = UDim2.new(0.0522675514, 0, 0.362535775, 0)
+WIP_11.Size = UDim2.new(0, 98, 0, 31)
+WIP_11.ZIndex = 2
+WIP_11.AutoButtonColor = false
+WIP_11.Font = Enum.Font.Ubuntu
+WIP_11.Text = "W.I.P"
+WIP_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_11.TextSize = 20.000
+WIP_11.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+
+WIP_12.Name = "W.I.P"
+WIP_12.Parent = Main
+WIP_12.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
+WIP_12.BorderColor3 = Color3.fromRGB(48, 66, 90)
+WIP_12.BorderSizePixel = 2
+WIP_12.Position = UDim2.new(0.0522675514, 0, 0.420479715, 0)
+WIP_12.Size = UDim2.new(0, 98, 0, 31)
+WIP_12.ZIndex = 2
+WIP_12.AutoButtonColor = false
+WIP_12.Font = Enum.Font.Ubuntu
+WIP_12.Text = "W.I.P"
+WIP_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+WIP_12.TextSize = 20.000
+WIP_12.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
 
 Invisible.Name = "Invisible"
 Invisible.Parent = Main
@@ -111,182 +305,111 @@ Invisible.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/3"))()
 end)
 
-WIP.Name = "W.I.P"
-WIP.Parent = Main
-WIP.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP.BorderSizePixel = 2
-WIP.Position = UDim2.new(0.0522675514, 0, 0.304591864, 0)
-WIP.Size = UDim2.new(0, 98, 0, 31)
-WIP.ZIndex = 2
-WIP.AutoButtonColor = false
-WIP.Font = Enum.Font.Ubuntu
-WIP.Text = "W.I.P"
-WIP.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP.TextSize = 20.000
-WIP.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+Login.Name = "Login"
+Login.Parent = ScreenGui
+Login.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Login.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Login.BorderSizePixel = 0
+Login.Position = UDim2.new(0.845767796, 0, 0.390207708, 0)
+Login.Size = UDim2.new(0, 200, 0, 148)
 
-WIP_2.Name = "W.I.P"
-WIP_2.Parent = Main
-WIP_2.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_2.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_2.BorderSizePixel = 2
-WIP_2.Position = UDim2.new(0.0522675514, 0, 0.246647939, 0)
-WIP_2.Size = UDim2.new(0, 98, 0, 31)
-WIP_2.ZIndex = 2
-WIP_2.AutoButtonColor = false
-WIP_2.Font = Enum.Font.Ubuntu
-WIP_2.Text = "W.I.P"
-WIP_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_2.TextSize = 20.000
-WIP_2.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(37, 163, 130)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(240, 208, 65))}
+UIGradient_2.Parent = Login
 
-WIP_3.Name = "W.I.P"
-WIP_3.Parent = Main
-WIP_3.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_3.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_3.BorderSizePixel = 2
-WIP_3.Position = UDim2.new(0.0522675514, 0, 0.362535775, 0)
-WIP_3.Size = UDim2.new(0, 98, 0, 31)
-WIP_3.ZIndex = 2
-WIP_3.AutoButtonColor = false
-WIP_3.Font = Enum.Font.Ubuntu
-WIP_3.Text = "W.I.P"
-WIP_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_3.TextSize = 20.000
-WIP_3.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+UICorner_2.CornerRadius = UDim.new(0, 4)
+UICorner_2.Parent = Login
 
-WIP_4.Name = "W.I.P"
-WIP_4.Parent = Main
-WIP_4.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_4.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_4.BorderSizePixel = 2
-WIP_4.Position = UDim2.new(0.0522675514, 0, 0.420479715, 0)
-WIP_4.Size = UDim2.new(0, 98, 0, 31)
-WIP_4.ZIndex = 2
-WIP_4.AutoButtonColor = false
-WIP_4.Font = Enum.Font.Ubuntu
-WIP_4.Text = "W.I.P"
-WIP_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_4.TextSize = 20.000
-WIP_4.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+Login_2.Name = "Login"
+Login_2.Parent = Login
+Login_2.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
+Login_2.BorderSizePixel = 0
+Login_2.Position = UDim2.new(0.0484127998, 0, 0.539129436, 0)
+Login_2.Size = UDim2.new(0, 180, 0, 45)
+Login_2.ZIndex = 2
+Login_2.Font = Enum.Font.GothamSemibold
+Login_2.Text = ""
+Login_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Login_2.TextScaled = true
+Login_2.TextSize = 14.000
+Login_2.TextWrapped = true
+Login_2.MouseButton1Down:connect(function()
+	Login.Visible = false
+	LoadingGui.Visible = true
+	wait(1.4)
+	Loading.Text = "Checking Whitelist..."
+	if Key.Text == "kirillisashitass9" then
+		wait(1.4)
+		Loading.Text = "Authentication Success."
+		wait(1)
+		LoadingGui.Visible = false
+		Main.Visible = true
+	elseif
+		wait(1.4)
+	then Loading.Text = "Incorrect Key.."
+		wait(1)
+		Loading.Text = "Please Try Again.."
+		wait(1)
+		LoadingGui.Visible = false
+		Login.Visible = true
+	end 
+end)
 
-WIP_5.Name = "W.I.P"
-WIP_5.Parent = Main
-WIP_5.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_5.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_5.BorderSizePixel = 2
-WIP_5.Position = UDim2.new(0.0522675514, 0, 0.478423625, 0)
-WIP_5.Size = UDim2.new(0, 98, 0, 31)
-WIP_5.ZIndex = 2
-WIP_5.AutoButtonColor = false
-WIP_5.Font = Enum.Font.Ubuntu
-WIP_5.Text = "W.I.P"
-WIP_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_5.TextSize = 20.000
-WIP_5.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+TextLabel.Parent = Login_2
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.49999997, 0, 0.500000119, 0)
+TextLabel.Size = UDim2.new(1, -20, 1, -20)
+TextLabel.ZIndex = 2
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "Proceed"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
 
-WIP_6.Name = "W.I.P"
-WIP_6.Parent = Main
-WIP_6.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_6.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_6.BorderSizePixel = 2
-WIP_6.Position = UDim2.new(0.0522675514, 0, 0.536367536, 0)
-WIP_6.Size = UDim2.new(0, 98, 0, 31)
-WIP_6.ZIndex = 2
-WIP_6.AutoButtonColor = false
-WIP_6.Font = Enum.Font.Ubuntu
-WIP_6.Text = "W.I.P"
-WIP_6.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_6.TextSize = 20.000
-WIP_6.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+UICorner_3.CornerRadius = UDim.new(0, 4)
+UICorner_3.Parent = Login_2
 
-WIP_7.Name = "W.I.P"
-WIP_7.Parent = Main
-WIP_7.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_7.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_7.BorderSizePixel = 2
-WIP_7.Position = UDim2.new(0.0522675514, 0, 0.594311476, 0)
-WIP_7.Size = UDim2.new(0, 98, 0, 31)
-WIP_7.ZIndex = 2
-WIP_7.AutoButtonColor = false
-WIP_7.Font = Enum.Font.Ubuntu
-WIP_7.Text = "W.I.P"
-WIP_7.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_7.TextSize = 20.000
-WIP_7.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+Key.Name = "Key"
+Key.Parent = Login
+Key.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Key.Position = UDim2.new(-0.00427365303, 0, 0.0603560656, 0)
+Key.Size = UDim2.new(0, 200, 0, 50)
+Key.Font = Enum.Font.SourceSans
+Key.Text = ""
+Key.TextColor3 = Color3.fromRGB(0, 0, 0)
+Key.TextSize = 14.000
 
-WIP_8.Name = "W.I.P"
-WIP_8.Parent = Main
-WIP_8.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_8.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_8.BorderSizePixel = 2
-WIP_8.Position = UDim2.new(0.0522675514, 0, 0.652255416, 0)
-WIP_8.Size = UDim2.new(0, 98, 0, 31)
-WIP_8.ZIndex = 2
-WIP_8.AutoButtonColor = false
-WIP_8.Font = Enum.Font.Ubuntu
-WIP_8.Text = "W.I.P"
-WIP_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_8.TextSize = 20.000
-WIP_8.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+UICorner_4.CornerRadius = UDim.new(0, 4)
+UICorner_4.Parent = Key
 
-WIP_9.Name = "W.I.P"
-WIP_9.Parent = Main
-WIP_9.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_9.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_9.BorderSizePixel = 2
-WIP_9.Position = UDim2.new(0.0522675514, 0, 0.710199356, 0)
-WIP_9.Size = UDim2.new(0, 98, 0, 31)
-WIP_9.ZIndex = 2
-WIP_9.AutoButtonColor = false
-WIP_9.Font = Enum.Font.Ubuntu
-WIP_9.Text = "W.I.P"
-WIP_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_9.TextSize = 20.000
-WIP_9.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+LoadingGui.Name = "LoadingGui"
+LoadingGui.Parent = ScreenGui
+LoadingGui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadingGui.BorderColor3 = Color3.fromRGB(27, 42, 53)
+LoadingGui.BorderSizePixel = 0
+LoadingGui.Position = UDim2.new(0.844999254, 0, 0.320474774, 0)
+LoadingGui.Size = UDim2.new(0, 201, 0, 47)
+LoadingGui.Visible = false
 
-WIP_10.Name = "W.I.P"
-WIP_10.Parent = Main
-WIP_10.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_10.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_10.BorderSizePixel = 2
-WIP_10.Position = UDim2.new(0.0522675514, 0, 0.768143296, 0)
-WIP_10.Size = UDim2.new(0, 98, 0, 31)
-WIP_10.ZIndex = 2
-WIP_10.AutoButtonColor = false
-WIP_10.Font = Enum.Font.Ubuntu
-WIP_10.Text = "W.I.P"
-WIP_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_10.TextSize = 20.000
-WIP_10.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(37, 163, 130)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(240, 208, 65))}
+UIGradient_3.Parent = LoadingGui
 
-WIP_11.Name = "W.I.P"
-WIP_11.Parent = Main
-WIP_11.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_11.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_11.BorderSizePixel = 2
-WIP_11.Position = UDim2.new(0.0522675514, 0, 0.826087236, 0)
-WIP_11.Size = UDim2.new(0, 98, 0, 31)
-WIP_11.ZIndex = 2
-WIP_11.AutoButtonColor = false
-WIP_11.Font = Enum.Font.Ubuntu
-WIP_11.Text = "W.I.P"
-WIP_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_11.TextSize = 20.000
-WIP_11.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+UICorner_5.CornerRadius = UDim.new(0, 4)
+UICorner_5.Parent = LoadingGui
 
-WIP_12.Name = "W.I.P"
-WIP_12.Parent = Main
-WIP_12.BackgroundColor3 = Color3.fromRGB(141, 255, 128)
-WIP_12.BorderColor3 = Color3.fromRGB(48, 66, 90)
-WIP_12.BorderSizePixel = 2
-WIP_12.Position = UDim2.new(0.0522675514, 0, 0.884031177, 0)
-WIP_12.Size = UDim2.new(0, 98, 0, 31)
-WIP_12.ZIndex = 2
-WIP_12.AutoButtonColor = false
-WIP_12.Font = Enum.Font.Ubuntu
-WIP_12.Text = "W.I.P"
-WIP_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-WIP_12.TextSize = 20.000
-WIP_12.TextStrokeColor3 = Color3.fromRGB(47, 33, 255)
+Loading.Name = "Loading"
+Loading.Parent = LoadingGui
+Loading.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Loading.Position = UDim2.new(0, 0, 0.164212167, 0)
+Loading.Size = UDim2.new(0, 201, 0, 30)
+Loading.Font = Enum.Font.SourceSans
+Loading.Text = ""
+Loading.TextColor3 = Color3.fromRGB(0, 0, 0)
+Loading.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(0, 4)
+UICorner_6.Parent = Loading
