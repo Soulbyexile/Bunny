@@ -1,0 +1,24 @@
+function Contains(group, text)
+   if string.find(group, text) then
+       return true;
+   else
+       return false;
+   end
+end
+ 
+local Name = game:GetService('Players').LocalPlayer.Name;
+local ID = game:GetService('Players').LocalPlayer.userId;
+local Format = (Name..'|'..ID);
+local Whitelist = game:HttpGet('https://raw.githubusercontent.com/Soulbyexile/Bunny/main/usernames%2B');-- requires pastebin link
+                                                                     
+if Contains(Whitelist, Name) and Contains(Whitelist, ID) then
+print("ur sus")
+  loadstring(game:HttpGet(('loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/Main%20Gui1"))()
+'),true))()-- can also have a script here insted of a loadstring
+else
+print("Not whitelisted :/")
+   game.StarterGui:SetCore("SendNotification", {
+    Title = "Whitelist";
+    Text = "ez noob"
+})
+end
