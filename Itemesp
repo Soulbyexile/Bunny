@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hellyeah1/yba-item-esp/main/ybaitemesp.lua", true))()
