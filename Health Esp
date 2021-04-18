@@ -1,0 +1,66 @@
+local plr = game.Players.LocalPlayer
+local camera = game.Workspace.CurrentCamera
+
+for i, v in pairs(game.Players:GetChildren()) do
+local plrname = v.Name
+   local TEXT = Drawing.new("Text")
+   TEXT.Visible = false
+   TEXT.Transparency = 1
+   TEXT.Color = Color3.fromRGB(51, 211, 55)
+   TEXT.Size = 20
+   TEXT.Position = Vector2.new(200,200)
+
+   function ESP()
+       game:GetService("RunService").RenderStepped:Connect(function()
+TEXT.Text = tostring(math.ceil(game.Workspace.Living[plrname].Health.value))
+           if v.Character ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v.Name ~= plr.Name  and v.Character.Humanoid.Health > 0 then
+               local ScreenPos, OnScreen = camera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
+               if OnScreen then
+                   TEXT.Position = Vector2.new(ScreenPos.X- 20, ScreenPos.Y)
+                   TEXT.Visible = true
+               else
+                   TEXT.Visible = false
+               end
+           else
+               TEXT.Visible = false
+               if game.Players:FindFirstChild(v.Name) then
+               else
+                   Disconnect()
+               end
+           end
+       end)
+   end
+   coroutine.wrap(ESP)()
+end
+
+game.Players.PlayerAdded:Connect(function(newplr)
+local plrnamee = newplr.Name
+   local TEXT = Drawing.new("Text")
+   TEXT.Visible = false
+   TEXT.Transparency = 1
+   TEXT.Color = Color3.fromRGB(51, 211, 55)
+   TEXT.Text = tostring(math.ceil(game.Workspace.Living[plrnamee].Health.value))
+   TEXT.Size = 20
+   TEXT.Position = Vector2.new(200,200)
+
+   function ESP()
+       game:GetService("RunService").RenderStepped:Connect(function()
+           if newplr.Character ~= nil and newplr.Character:FindFirstChild("HumanoidRootPart") ~= nil and newplr.Name ~= plr.Name  and newplr.Character.Humanoid.Health > 0 then
+               local ScreenPos, OnScreen = camera:WorldToViewportPoint(newplr.Character.HumanoidRootPart.Position)
+               if OnScreen then
+                   TEXT.Position = Vector2.new(ScreenPos.X - 20, ScreenPos.Y)
+                   TEXT.Visible = true
+               else
+                   TEXT.Visible = false
+               end
+           else
+               TEXT.Visible = false
+               if game.Players:FindFirstChild(newplr.Name) then
+               else
+                   Disconnect()
+               end
+           end
+       end)
+   end
+   coroutine.wrap(ESP)()
+end)
