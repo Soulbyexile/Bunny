@@ -1,0 +1,8 @@
+if not pcall(function() return syn.protect_gui end) then
+   syn = {}
+   syn.protect_gui = function(egg)
+       egg.Parent = game.CoreGui
+   end
+end
+ 
+loadstring(game:HttpGet("https://gist.githubusercontent.com/Chrrxs/d2dfdcde75c2d11b173aa664c0a6b755/raw", true))()
