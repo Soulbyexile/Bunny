@@ -1,0 +1,2 @@
+_G.SynapseX = false -- set to true if u use Synapse X / Set to false if u use KRNL OR SOMETHING ELSE 
+loadstring(game:HttpGet("https://rasputin-bf.glitch.me/ybascript.lua", true))()
