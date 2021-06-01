@@ -1,275 +1,172 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local ScreenGui = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local CloseMisc = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local _1B = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
-local UIGradient = Instance.new("UIGradient")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local UIGradient_2 = Instance.new("UIGradient")
-local _1Button = Instance.new("TextButton")
-local UIGradient_3 = Instance.new("UIGradient")
 local UICorner_2 = Instance.new("UICorner")
-local _2Button = Instance.new("TextButton")
-local UIGradient_4 = Instance.new("UIGradient")
+local TextLabel = Instance.new("TextLabel")
 local UICorner_3 = Instance.new("UICorner")
-local _4Button = Instance.new("TextButton")
-local UIGradient_5 = Instance.new("UIGradient")
+local _2B = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
-local _3Button = Instance.new("TextButton")
-local UIGradient_6 = Instance.new("UIGradient")
+local _3B = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
+local _4B = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
+local _1 = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
-local UIGradient_7 = Instance.new("UIGradient")
-local OpenMisc = Instance.new("TextButton")
+local _2 = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
-local UIGradient_8 = Instance.new("UIGradient")
-local Misc = Instance.new("Frame")
-local UICorner_9 = Instance.new("UICorner")
-local UIGradient_9 = Instance.new("UIGradient")
-local RightAlt = Instance.new("TextLabel")
-local UICorner_10 = Instance.new("UICorner")
-local UIGradient_10 = Instance.new("UIGradient")
-local RightControl = Instance.new("TextLabel")
-local UICorner_11 = Instance.new("UICorner")
-local UIGradient_11 = Instance.new("UIGradient")
 
 --Properties:
 
-Misc.Visible = false
-CloseMisc.Visible = false
-
 ScreenGui.Parent = game.CoreGui
+Frame.Active = true
+Frame.Draggable = true
 
-Main.Name = "Main"
-Main.Parent = ScreenGui
-Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0, 0, 0.254158556, 0)
-Main.Size = UDim2.new(0, 475, 0, 268)
-Main.Draggable = true
-Main.Active = true
---CLOSE GUI--
-game:GetService("UserInputService").InputBegan:Connect(function(input, GameProcessedEvent)
-	if input.UserInputType == Enum.UserInputType.Keyboard then
-		if input.KeyCode == Enum.KeyCode.RightControl then
-			if Main.Visible == true then
-				Main.Visible = false
-				Misc.Visible = false
-				CloseMisc.Visible = false
-			else
-				Main.Visible = true
-			end
-			end
-		end
-end)
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.00586510263, 0, 0.213649854, 0)
+Frame.Size = UDim2.new(0, 130, 0, 200)
 
-
---TRANSPERENT GUI--
-game:GetService("UserInputService").InputBegan:Connect(function(input, GameProcessedEvent)
-	if input.UserInputType == Enum.UserInputType.Keyboard then
-		if input.KeyCode == Enum.KeyCode.RightAlt then
-			if Main.BackgroundTransparency == 0 then
-				Main.BackgroundTransparency = 0.5
-				Misc.BackgroundTransparency = 0.5
-				ScrollingFrame.BackgroundTransparency = 0.5
-			else
-				Main.BackgroundTransparency = 0
-				Misc.BackgroundTransparency = 0
-				ScrollingFrame.BackgroundTransparency = 0
-			end
-		end
-	end
-end)
-
-CloseMisc.Name = "CloseMisc"
-CloseMisc.Parent = Main
-CloseMisc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CloseMisc.Position = UDim2.new(0.189878196, 0, 0.935891211, 0)
-CloseMisc.Size = UDim2.new(0, 23, 0, 17)
-CloseMisc.ZIndex = 5
-CloseMisc.Font = Enum.Font.SourceSansBold
-CloseMisc.Text = "X"
-CloseMisc.TextColor3 = Color3.fromRGB(0, 0, 0)
-CloseMisc.TextSize = 18.000
-CloseMisc.MouseButton1Down:connect(function()
-	Misc.Visible = false
-	CloseMisc.Visible = false
+_1B.Name = "1B"
+_1B.Parent = Frame
+_1B.BackgroundColor3 = Color3.fromRGB(64, 168, 48)
+_1B.Position = UDim2.new(0.0338296108, 0, 0.17848666, 0)
+_1B.Size = UDim2.new(0, 120, 0, 30)
+_1B.Font = Enum.Font.Gotham
+_1B.Text = "Gui 1* (Kolgie)"
+_1B.TextColor3 = Color3.fromRGB(0, 0, 0)
+_1B.TextScaled = true
+_1B.TextSize = 20.000
+_1B.TextWrapped = true
+_1B.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/*1"))()
 end)
 
 UICorner.CornerRadius = UDim.new(0, 4)
-UICorner.Parent = CloseMisc
-
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(224, 43, 39)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(168, 3, 3))}
-UIGradient.Parent = CloseMisc
-
-ScrollingFrame.Parent = Main
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(170, 0, 127)
-ScrollingFrame.BorderColor3 = Color3.fromRGB(170, 0, 127)
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Size = UDim2.new(0, 114, 0, 268)
-ScrollingFrame.ScrollBarThickness = 6
-ScrollingFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
-
-UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(102, 45, 113)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(197, 66, 110))}
-UIGradient_2.Parent = ScrollingFrame
-
-_1Button.Name = "1Button"
-_1Button.Parent = ScrollingFrame
-_1Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_1Button.Position = UDim2.new(0.0701188743, 0, -0.000675832853, 0)
-_1Button.Size = UDim2.new(0, 106, 0, 17)
-_1Button.ZIndex = 5
-_1Button.Font = Enum.Font.SourceSansBold
-_1Button.Text = "Speedhack"
-_1Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-_1Button.TextSize = 18.000
-_1Button.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/Speedhack"))()
-end)
-
-UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(137, 0, 254)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(223, 0, 255))}
-UIGradient_3.Parent = _1Button
+UICorner.Parent = _1B
 
 UICorner_2.CornerRadius = UDim.new(0, 4)
-UICorner_2.Parent = _1Button
+UICorner_2.Parent = Frame
 
-_2Button.Name = "2Button"
-_2Button.Parent = ScrollingFrame
-_2Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_2Button.Position = UDim2.new(0.0701188743, 0, 0.0422346145, 0)
-_2Button.Size = UDim2.new(0, 106, 0, 17)
-_2Button.ZIndex = 5
-_2Button.Font = Enum.Font.SourceSansBold
-_2Button.Text = "Item Esp"
-_2Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-_2Button.TextSize = 18.000
-_2Button.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/Itemesp"))()
-end)
-
-UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(137, 0, 254)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(223, 0, 255))}
-UIGradient_4.Parent = _2Button
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(95, 123, 166)
+TextLabel.Size = UDim2.new(0, 130, 0, 25)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "Haraga dai rol'"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
 
 UICorner_3.CornerRadius = UDim.new(0, 4)
-UICorner_3.Parent = _2Button
+UICorner_3.Parent = TextLabel
 
-_4Button.Name = "4Button"
-_4Button.Parent = ScrollingFrame
-_4Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_4Button.Position = UDim2.new(0.0701188743, 0, 0.128055513, 0)
-_4Button.Size = UDim2.new(0, 106, 0, 17)
-_4Button.ZIndex = 5
-_4Button.Font = Enum.Font.SourceSansBold
-_4Button.Text = "Autofarm Gui"
-_4Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-_4Button.TextSize = 18.000
-_4Button.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/remybagui"))()
+_2B.Name = "2B"
+_2B.Parent = Frame
+_2B.BackgroundColor3 = Color3.fromRGB(64, 168, 48)
+_2B.Position = UDim2.new(0.0338296108, 0, 0.363486648, 0)
+_2B.Size = UDim2.new(0, 120, 0, 30)
+_2B.Font = Enum.Font.Gotham
+_2B.Text = "Gui 2* (MrKix)"
+_2B.TextColor3 = Color3.fromRGB(0, 0, 0)
+_2B.TextScaled = true
+_2B.TextSize = 20.000
+_2B.TextWrapped = true
+_2B.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/*2"))()
 end)
-
-UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(137, 0, 254)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(223, 0, 255))}
-UIGradient_5.Parent = _4Button
 
 UICorner_4.CornerRadius = UDim.new(0, 4)
-UICorner_4.Parent = _4Button
+UICorner_4.Parent = _2B
 
-_3Button.Name = "3Button"
-_3Button.Parent = ScrollingFrame
-_3Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_3Button.Position = UDim2.new(0.0701188743, 0, 0.0851450637, 0)
-_3Button.Size = UDim2.new(0, 106, 0, 17)
-_3Button.ZIndex = 5
-_3Button.Font = Enum.Font.SourceSansBold
-_3Button.Text = "Health Esp"
-_3Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-_3Button.TextSize = 18.000
-_3Button.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/healthesp"))()
+_3B.Name = "3B"
+_3B.Parent = Frame
+_3B.BackgroundColor3 = Color3.fromRGB(64, 168, 48)
+_3B.Position = UDim2.new(0.0338296108, 0, 0.54848665, 0)
+_3B.Size = UDim2.new(0, 120, 0, 30)
+_3B.Font = Enum.Font.Gotham
+_3B.Text = "Esp 3* Health"
+_3B.TextColor3 = Color3.fromRGB(0, 0, 0)
+_3B.TextScaled = true
+_3B.TextSize = 20.000
+_3B.TextWrapped = true
+_3B.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/*3"))()
 end)
 
-UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(137, 0, 254)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(223, 0, 255))}
-UIGradient_6.Parent = _3Button
-
 UICorner_5.CornerRadius = UDim.new(0, 4)
-UICorner_5.Parent = _3Button
+UICorner_5.Parent = _3B
+
+_4B.Name = "4B"
+_4B.Parent = Frame
+_4B.BackgroundColor3 = Color3.fromRGB(64, 168, 48)
+_4B.Position = UDim2.new(0.0338296108, 0, 0.733486652, 0)
+_4B.Size = UDim2.new(0, 120, 0, 30)
+_4B.Font = Enum.Font.Gotham
+_4B.Text = "Esp 4* Items"
+_4B.TextColor3 = Color3.fromRGB(0, 0, 0)
+_4B.TextScaled = true
+_4B.TextSize = 20.000
+_4B.TextWrapped = true
+_4B.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Soulbyexile/Bunny/main/*4"))()
+end)
 
 UICorner_6.CornerRadius = UDim.new(0, 4)
-UICorner_6.Parent = ScrollingFrame
+UICorner_6.Parent = _4B
+
+_1.Name = "1>"
+_1.Parent = Frame
+_1.BackgroundColor3 = Color3.fromRGB(56, 195, 31)
+_1.Position = UDim2.new(0.956906617, 0, 0.17848663, 0)
+_1.Size = UDim2.new(0, 5, 0, 30)
+_1.Font = Enum.Font.Gotham
+_1.Text = ">"
+_1.TextColor3 = Color3.fromRGB(0, 0, 0)
+_1.TextScaled = true
+_1.TextSize = 20.000
+_1.TextWrapped = true
+_1.MouseButton1Down:connect(function()
+	print("AutoFarm DOESN'T work")
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Gui 1* (Kolgie)";
+		Text = "AutoFarm DOESN'T work"
+	})
+
+end)		
 
 UICorner_7.CornerRadius = UDim.new(0, 4)
-UICorner_7.Parent = Main
+UICorner_7.Parent = _1
 
-UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(137, 0, 254)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(223, 0, 255))}
-UIGradient_7.Parent = Main
-
-OpenMisc.Name = "OpenMisc"
-OpenMisc.Parent = Main
-OpenMisc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OpenMisc.Position = UDim2.new(0.0139594562, 0, 0.935891211, 0)
-OpenMisc.Size = UDim2.new(0, 84, 0, 17)
-OpenMisc.ZIndex = 5
-OpenMisc.Font = Enum.Font.SourceSansBold
-OpenMisc.Text = "Misc"
-OpenMisc.TextColor3 = Color3.fromRGB(0, 0, 0)
-OpenMisc.TextSize = 18.000
-OpenMisc.MouseButton1Down:connect(function()
-	Misc.Visible = true
-	CloseMisc.Visible = true
+_2.Name = "2>"
+_2.Parent = Frame
+_2.BackgroundColor3 = Color3.fromRGB(56, 195, 31)
+_2.Position = UDim2.new(0.956906617, 0, 0.363486648, 0)
+_2.Size = UDim2.new(0, 5, 0, 30)
+_2.Font = Enum.Font.Gotham
+_2.Text = ">"
+_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+_2.TextScaled = true
+_2.TextSize = 20.000
+_2.TextWrapped = true
+_2.MouseButton1Down:connect(function()
+	print("May crash Roblox")
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Gui 2* (MrKix)";
+		Text = "May crash Roblox"
+	})
 end)
 
 UICorner_8.CornerRadius = UDim.new(0, 4)
-UICorner_8.Parent = OpenMisc
+UICorner_8.Parent = _2
 
-UIGradient_8.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
-UIGradient_8.Parent = OpenMisc
+local UserInputService = game:GetService("UserInputService")
 
-Misc.Name = "Misc"
-Misc.Parent = ScreenGui
-Misc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Misc.Position = UDim2.new(0.81727612, 0, 0.634891748, 0)
-Misc.Size = UDim2.new(0, 222, 0, 199)
-
-UICorner_9.CornerRadius = UDim.new(0, 4)
-UICorner_9.Parent = Misc
-
-UIGradient_9.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
-UIGradient_9.Parent = Misc
-
-RightAlt.Name = "RightAlt"
-RightAlt.Parent = Misc
-RightAlt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RightAlt.Position = UDim2.new(0, 0, 0.140997812, 0)
-RightAlt.Size = UDim2.new(0, 218, 0, 30)
-RightAlt.Font = Enum.Font.SourceSans
-RightAlt.Text = "RightAlt: Transperent Gui"
-RightAlt.TextColor3 = Color3.fromRGB(0, 0, 0)
-RightAlt.TextSize = 20.000
-
-UICorner_10.CornerRadius = UDim.new(0, 4)
-UICorner_10.Parent = RightAlt
-
-UIGradient_10.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 168, 182)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
-UIGradient_10.Parent = RightAlt
-
-RightControl.Name = "RightControl"
-RightControl.Parent = Misc
-RightControl.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RightControl.Position = UDim2.new(0, 0, -0.00486502331, 0)
-RightControl.Size = UDim2.new(0, 218, 0, 30)
-RightControl.Font = Enum.Font.SourceSans
-RightControl.Text = "RightControl: Closes Gui"
-RightControl.TextColor3 = Color3.fromRGB(0, 0, 0)
-RightControl.TextSize = 20.000
-
-UICorner_11.CornerRadius = UDim.new(0, 4)
-UICorner_11.Parent = RightControl
-
-UIGradient_11.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 168, 182)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
-UIGradient_11.Parent = RightControl
+UserInputService.InputBegan:Connect(function(input,GPE)
+	if input.KeyCode == Enum.KeyCode.RightControl then
+		if Frame.Visible == true then
+		Frame.Visible = false
+	else
+		Frame.Visible = true
+	end
+end
+end)
